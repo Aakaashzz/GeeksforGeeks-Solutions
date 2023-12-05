@@ -1,7 +1,5 @@
 # GeeksforGeeks-Solutions
-➡I have a strong foundation in Algorithms and data structures, as evidenced by my ability to solve a variety of LeetCode problems using a variety of algorithmic techniques, including dynamic programming, greedy algorithms, and backtracking.
-
-➡I am also proficient in a variety of programming languages, including Python, Java, and C++, and I am able to write efficient and idiomatic code in each language.
+➡My proficiency extends to programming languages such as Python and Java, where I have demonstrated the ability to design and implement robust solutions. 
 
 ➡I have a deep understanding of the time and space complexity of different algorithmic techniques, and I am able to choose the most appropriate technique for a given problem. 
 
