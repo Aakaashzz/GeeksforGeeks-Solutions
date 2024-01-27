@@ -1,26 +1,30 @@
-from heapq import heappush as hpush, heappop as hpop
+#User function Template for python3
+
+from collections import defaultdict, deque
+
+
 class Solution:
-    def findOrder(self, n, m, p):
-        a=[[] for k in range(n)]
-        indeg=[0] * n
-        for i,j in p:
-            a[j].append(i)
-            indeg[i]+=1
-        h=[]
-        for i in range(n):
-            if indeg[i]==0:
-                hpush(h,i)
-        r=[]
-        while h:
-            node=hpop(h)
-            r.append(node)
-            for j in a[node]:
-                indeg[j]-=1
-                if indeg[j]==0:
-                    hpush(h,j)
-        if len(r)!=n:
-            return []
-        return r
+    def findOrder(self, n, m, prerequisites):
+        graph=defaultdict(list)
+        degree=[0]*n
+        for c, p in prerequisites:
+            graph[p].append(c)
+            degree[c]+=1
+        # print(degree)
+        queue=deque([i for i in range(n) if degree[i]==0])
+        # print(queue)
+        ans=[]
+        while queue:
+            node=queue.popleft()
+            ans.append(node)
+            
+            for x in graph[node]:
+                degree[x]-=1
+                if degree[x]==0:
+                    queue.append(x)
+        # print(ans)
+        # print(graph)
+        return ans if len(ans)==n else []
 
 
 #{ 
