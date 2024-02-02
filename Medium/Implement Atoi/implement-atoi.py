@@ -1,26 +1,19 @@
 #User function template for Python
 
 class Solution:
-    def atoi(self,string):
-        a=""
-        if string[0]=="-":
-            a+="-"
-            aa="1234567890"
-            for i in string[1:]:
-                if (i) in aa:
-                    a+=i
-                else:
-                    return -1
-            return int(a)
-        else:
-            aa="1234567890"
-            for i in string:
-                if (i) in aa:
-                    a+=i
-                else:
-                    return -1
-            return int(a)
-            
+    # your task is to complete this function
+    # function should return an integer
+    def atoi(self,s):
+        ans=0
+        start=1 if s.startswith("-") else 0
+        for i in range(start,len(s)):
+            if ord(s[i])<=ord("9") and ord(s[i])>=ord("0"):
+                ans=ans*10+ord(s[i])-ord("0")
+            else:
+                return -1
+        return -1*ans if start else ans
+
+
 #{ 
  # Driver Code Starts
 #Initial template for Python
