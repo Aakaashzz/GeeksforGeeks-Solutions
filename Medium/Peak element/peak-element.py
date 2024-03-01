@@ -1,26 +1,14 @@
 # your task is to complete this function
-# function should return index to the any valid peak element
 class Solution:   
     def peakElement(self,arr, n):
-        if n==1:
-            return 0
-        
-        if arr[0]>arr[1]:
-            return 0
-            
-        for i in range(1,len(arr)-1):
-            if arr[i]>arr[i+1]:
-                return i
-        
-        if arr[-1]>=arr[-2]:
-            return len(arr)-1
-
-
+        # Code here
+        return arr.index(max(arr))
 
 
 
 #{ 
  # Driver Code Starts
+
 if __name__=='__main__':
     t = int(input())
     for i in range(t):
