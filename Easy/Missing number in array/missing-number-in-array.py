@@ -1,12 +1,12 @@
 #User function Template for pyt
 class Solution:
     def missingNumber(self, array, n):
-        s = len(array) + 1
-        expectsum = s * (s + 1) // 2
-        actualsum = sum(array)
-        missing = expectsum - actualsum
-        return missing
-
+        a =len(array)+1
+        b = a*(a+1)//2
+        c = sum(array)
+        d = b-c
+        return d
+        
 #{ 
  # Driver Code Starts
 #Initial Template for Python 3
