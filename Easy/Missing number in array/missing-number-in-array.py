@@ -1,12 +1,19 @@
-#User function Template for pyt
+#User function Template for python3
+
+
 class Solution:
-    def missingNumber(self, array, n):
-        a =len(array)+1
-        b = a*(a+1)//2
-        c = sum(array)
-        d = b-c
-        return d
-        
+    def missingNumber(self,array,n):
+        array.sort()
+        a=1
+        for i in range(n-1):
+            if array[i]!=a:
+                return a
+            a+=1
+        return a
+            
+            
+
+
 #{ 
  # Driver Code Starts
 #Initial Template for Python 3
